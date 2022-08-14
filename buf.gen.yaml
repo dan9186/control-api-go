@@ -1,0 +1,19 @@
+
+version: v1
+plugins:
+  - remote: buf.build/protocolbuffers/plugins/go
+    # this is an 'official' buf.build namespace
+    out: .
+    opt:
+      - module=github.com/dan9186/control-api-go
+
+  - remote: buf.build/grpc/plugins/go
+    # this is an 'official' buf.build namespace
+    out: .
+    opt:
+      - module=github.com/dan9186/control-api-go
+
+  - remote: buf.build/grpc-ecosystem/plugins/grpc-gateway
+    out: .
+    opt:
+      - module=github.com/dan9186/control-api-go

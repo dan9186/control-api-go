@@ -388,6 +388,14 @@ func (m *Event) Validate() error {
 		return nil
 	}
 
+	if err := m._validateUuid(m.GetId()); err != nil {
+		return EventValidationError{
+			field:  "Id",
+			reason: "value must be a valid UUID",
+			cause:  err,
+		}
+	}
+
 	if wrapper := m.GetResponseId(); wrapper != nil {
 
 		if err := m._validateUuid(wrapper.GetValue()); err != nil {

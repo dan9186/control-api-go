@@ -1,0 +1,7 @@
+project:
+    name: control-api-go
+
+steps:
+    build:
+        help: Build the generated files
+        cmd: 'buf -v generate https://github.com/dan9186/control-api.git#branch=master,subdir=proto'

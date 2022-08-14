@@ -17,3 +17,9 @@ plugins:
     out: .
     opt:
       - module=github.com/dan9186/control-api-go
+
+  - name: validate
+    out: ../../../
+    opt:
+      - module=github.com/dan9186/control-api-go
+      - lang=go
